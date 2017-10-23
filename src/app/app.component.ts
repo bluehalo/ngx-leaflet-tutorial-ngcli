@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { icon, latLng, marker, polyline, tileLayer } from 'leaflet';
+import { icon, latLng, marker, point, polyline, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -28,5 +28,13 @@ export class AppComponent {
 
   layers = [ this.googleMaps, this.route, this.summit ];
   options = { zoom: 7, center: latLng([ 46.879966, -121.726909 ]) };
+
+  fitBounds = this.route.getBounds();
+  fitBoundsOptions = {
+    padding: point(24, 24),
+    maxZoom: 12,
+    animate: true
+  };
+
 
 }
