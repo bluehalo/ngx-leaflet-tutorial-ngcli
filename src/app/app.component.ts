@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { icon, latLng, marker, point, polyline, tileLayer } from 'leaflet';
+import { icon, latLng, Map, marker, point, polyline, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -50,15 +50,18 @@ export class AppComponent {
       'Mt. Rainier Climb Route': this.route
     }
   };
-  layers = [ this.googleMaps, this.route, this.summit, this.paradise ];
-  options = { zoom: 7, center: latLng([ 46.879966, -121.726909 ]) };
-
-  fitBounds = this.route.getBounds();
-  fitBoundsOptions = {
-    padding: point(24, 24),
-    maxZoom: 12,
-    animate: true
+  options = {
+    layers: [ this.googleMaps, this.route, this.summit, this.paradise ],
+    zoom: 7,
+    center: latLng([ 46.879966, -121.726909 ])
   };
 
+  onMapReady(map: Map) {
+    map.fitBounds(this.route.getBounds(), {
+      padding: point(24, 24),
+      maxZoom: 12,
+      animate: true
+    });
+  }
 
 }

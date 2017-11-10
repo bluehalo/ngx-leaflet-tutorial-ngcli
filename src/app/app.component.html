@@ -1,7 +1,5 @@
 <div class="map"
   leaflet
+  (leafletMapReady)="onMapReady($event)"
   [leafletOptions]="options"
-  [leafletLayers]="layers"
-  [leafletLayersControl]="layersControl"
-  [leafletFitBounds]="fitBounds"
-  [leafletFitBoundsOptions]="fitBoundsOptions"></div>
+  [leafletLayersControl]="layersControl"></div>
