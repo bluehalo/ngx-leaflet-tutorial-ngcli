@@ -159,8 +159,8 @@
     tslib "^1.7.1"
 
 "@asymmetrik/ngx-leaflet@3.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@asymmetrik/ngx-leaflet/-/ngx-leaflet-3.0.0.tgz#609bc36374190dbb12df6cf082fa02fcf332fd6a"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@asymmetrik/ngx-leaflet/-/ngx-leaflet-3.0.1.tgz#89a390f77dace1aefb7887162937b51c39571a24"
 
 "@ngtools/json-schema@1.1.0", "@ngtools/json-schema@^1.1.0":
   version "1.1.0"
