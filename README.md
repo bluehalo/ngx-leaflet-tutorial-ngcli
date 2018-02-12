@@ -1,6 +1,10 @@
-# NgxLeafletTutorial
+# Getting Started with @asymmetrik/ngx-leaflet
+>A tutorial on adding maps to @angular/cli projects
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
+This repository contains a basic working example of the @asymmetrik/ngx-leaflet plugin being used in an @angular/cli project.
+The written tutorial is located at https://www.asymmetrik.com/ngx-leaflet-tutorial-angular-cli/
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 ## Development server
 
