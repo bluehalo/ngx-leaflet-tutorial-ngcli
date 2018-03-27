@@ -1,5 +1,37 @@
-<div class="map"
-  leaflet
-  (leafletMapReady)="onMapReady($event)"
-  [leafletOptions]="options"
-  [leafletLayersControl]="layersControl"></div>
+<section class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Static ngx-bootstrap Modal with an ngx-leaflet map inside of it</h1>
+      <p>The key is to call map.invalidateSize() after the modal is shown. You can use the (onShown) output for this.</p>
+
+      <button type="button" class="btn btn-primary" (click)="staticModal.show()">Show a Map</button>
+
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"
+     (onShown)="handleOnShown()">
+
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="map"
+
+             leaflet
+             (leafletMapReady)="onMapReady($event)"
+             [leafletOptions]="options"
+             [leafletLayersControl]="layersControl"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+

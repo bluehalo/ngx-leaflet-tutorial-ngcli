@@ -9,6 +9,8 @@ import { icon, latLng, Map, marker, point, polyline, tileLayer } from 'leaflet';
 })
 export class AppComponent {
 
+  map: Map;
+
   googleMaps = tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
@@ -57,11 +59,16 @@ export class AppComponent {
   };
 
   onMapReady(map: Map) {
-    map.fitBounds(this.route.getBounds(), {
+    this.map = map;
+    this.map.fitBounds(this.route.getBounds(), {
       padding: point(24, 24),
       maxZoom: 12,
       animate: true
     });
+  }
+
+  handleOnShown() {
+    this.map.invalidateSize();
   }
 
 }
