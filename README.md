@@ -2,9 +2,9 @@
 >A tutorial on adding maps to @angular/cli projects
 
 This repository contains a basic working example of the @asymmetrik/ngx-leaflet plugin being used in an @angular/cli project.
-The written tutorial is located at https://www.asymmetrik.com/ngx-leaflet-tutorial-angular-cli/
+There is a complete walkthrough of the tutorial at https://asymmetrik.com/ngx-leaflet-tutorial-angular-cli/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 
@@ -16,7 +16,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
