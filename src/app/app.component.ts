@@ -9,15 +9,13 @@ import { icon, latLng, Map, marker, point, polyline, tileLayer } from 'leaflet';
 })
 export class AppComponent {
 
-  googleMaps = tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-    maxZoom: 20,
-    subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-    detectRetina: true
+  streetMaps = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    detectRetina: true,
+    attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
   });
-  googleHybrid = tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-    maxZoom: 20,
-    subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
-    detectRetina: true
+  wMaps = tileLayer('http://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+    detectRetina: true,
+    attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
   });
 
   summit = marker([ 46.8523, -121.7603 ], {
@@ -41,8 +39,8 @@ export class AppComponent {
 
   layersControl = {
     baseLayers: {
-      'Google Maps': this.googleMaps,
-      'Google Hybrid': this.googleHybrid
+      'Street Maps': this.streetMaps,
+      'Wikimedia Maps': this.wMaps
     },
     overlays: {
       'Mt. Rainier Summit': this.summit,
@@ -51,7 +49,7 @@ export class AppComponent {
     }
   };
   options = {
-    layers: [ this.googleMaps, this.route, this.summit, this.paradise ],
+    layers: [ this.streetMaps, this.route, this.summit, this.paradise ],
     zoom: 7,
     center: latLng([ 46.879966, -121.726909 ])
   };
