@@ -1,5 +1,7 @@
 <div class="map"
   leaflet
-  (leafletMapReady)="onMapReady($event)"
   [leafletOptions]="options"
-  [leafletLayersControl]="layersControl"></div>
+  (leafletMapReady)="onMapReady($event)"
+  (leafletMapMoveEnd)="handleMapMoveEnd($event)"
+  (leafletMapZoomEnd)="handleMapZoomEnd($event)"
+  ></div>
