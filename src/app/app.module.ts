@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,7 +9,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    LeafletModule.forRoot()
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
